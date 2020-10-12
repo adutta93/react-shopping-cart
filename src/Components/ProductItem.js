@@ -20,6 +20,7 @@ class ProductItem extends Component {
                 marginBottom: "12rem",
                 marginLeft: "2rem",
               }}
+              data-testid="product"
             >
               <Link to="/details">
                 <Card.Img variant="top" src={img} alt="product" />
