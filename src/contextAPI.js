@@ -53,13 +53,16 @@ class ProductProvider extends Component {
   };
 
   filterBySize = (e) => {
-    if (e.target.value === "") {
-      this.setState({ size: e.target.value, products: this.state.products });
+    if (!!e && e.target.value === "") {
+      this.setState({
+        size: !!e && e.target.value,
+        products: this.state.products,
+      });
     }
     this.setState({
-      size: e.target.value,
+      size: !!e && e.target.value,
       products: this.state.products.filter(
-        (product) => product.availableSizes.indexOf(e.target.value) >= 0
+        (product) => product.availableSizes.indexOf(!!e && e.target.value) >= 0
       ),
     });
   };
