@@ -55,7 +55,7 @@ class ProductDetails extends Component {
                           icon: "success",
                           position: "center",
                           showConfirmButton: false,
-                          timer: 1500,
+                          timer: 1000,
                         });
                       }}
                       variant="secondary"

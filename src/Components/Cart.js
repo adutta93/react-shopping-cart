@@ -80,7 +80,7 @@ class Cart extends Component {
                                 icon: "success",
                                 position: "center",
                                 showConfirmButton: false,
-                                timer: 1500,
+                                timer: 1000,
                               });
                             }}
                             size="sm"
@@ -109,7 +109,7 @@ class Cart extends Component {
                               icon: "success",
                               position: "center",
                               showConfirmButton: false,
-                              timer: 1500,
+                              timer: 1000,
                             });
                           }}
                         >
