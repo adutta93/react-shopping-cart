@@ -30,8 +30,7 @@ class ProductProvider extends Component {
 
   //sort by price range
   sortByPrice = (e) => {
-    const value = e.target.value;
-    console.log(value);
+    const value = !!e && e.target.value;
     if (value === "") {
       this.setState({
         products: this.state.products,
