@@ -46,7 +46,12 @@ class ProductItem extends Component {
                     </Button>
                   </Col>
                   <Col>
-                    <small className="text-muted text-right">INR {price}</small>
+                    <small
+                      className="text-muted text-right"
+                      style={{ fontSize: "1.2rem" }}
+                    >
+                      ₹ {price}
+                    </small>
                   </Col>
                 </Row>
               </Card.Footer>

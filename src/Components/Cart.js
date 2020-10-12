@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Button } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 import { ProductConsumer } from "../contextAPI";
 class Cart extends Component {
   render() {
@@ -50,7 +50,7 @@ class Cart extends Component {
 
                         <div className="col-10 col-lg-2">{cartItem.title}</div>
                         <div className="col-10 col-lg-2">
-                          INR {cartItem.price}
+                          ₹ {cartItem.price}
                         </div>
                         <div className="col-10 col-lg-2 qty">
                           <input
@@ -80,6 +80,20 @@ class Cart extends Component {
                       </div>
                     </div>
                   ))}
+                  <hr />
+                  <Container>
+                    <Row>
+                      <Col>
+                        <strong>Total : </strong> ₹ {value.subTotal}
+                      </Col>
+
+                      <Col>
+                        <Button varient="success" size="sm">
+                          Proceed
+                        </Button>
+                      </Col>
+                    </Row>
+                  </Container>
                 </div>
               );
             } else {

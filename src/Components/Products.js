@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../contextAPI";
 import ProductItem from "./ProductItem";
+import Filter from "./Filter";
 class Products extends Component {
   render() {
     return (
       <div className="container">
         <div>
           <h1>Products</h1>
+          <Filter />
           <div className="row">
             <ProductConsumer>
               {(value) => {
