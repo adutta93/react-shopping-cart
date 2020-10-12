@@ -3,7 +3,6 @@ import "../App.css";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { ProductConsumer } from "../contextAPI";
 import Swal from "sweetalert2";
-import { Redirect } from "react-router-dom";
 
 class Cart extends Component {
   render() {
