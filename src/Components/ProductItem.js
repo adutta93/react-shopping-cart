@@ -22,7 +22,7 @@ class ProductItem extends Component {
               }}
             >
               <Link to="/details">
-                <Card.Img variant="top" src={img} />
+                <Card.Img variant="top" src={img} alt="product" />
               </Link>
               <Card.Body>
                 <Card.Title>{title}</Card.Title>

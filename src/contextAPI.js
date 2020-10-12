@@ -179,6 +179,7 @@ class ProductProvider extends Component {
           decrement: this.decrement,
           sortByPrice: this.sortByPrice,
           filterBySize: this.filterBySize,
+          removeItem: this.removeItem,
           // subTotal: this.subTotal,
         }}
       >

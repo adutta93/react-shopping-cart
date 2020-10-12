@@ -6,10 +6,20 @@ const Filter = () => {
     <ProductConsumer>
       {(value) => (
         <div className="filter">
-          <div className="filter-result">{value.products.length} products</div>
+          <div className="filter-result">
+            {!!value && !!value.products && value.products.length} products
+          </div>
           <div className="filter-sort">
             Price{" "}
-            <select value={value.sort} onChange={value.sortByPrice}>
+            <select
+              value={!!value && value.sort}
+              // onChange={!!value && value.sortByPrice}
+              onChange={() => {
+                if (!!value) {
+                  value.sortByPrice();
+                }
+              }}
+            >
               <option>Select</option>
               <option value="low-tier">₹ 0 - ₹ 399</option>
               <option value="mid-tier">₹ 400 - ₹ 699</option>
@@ -18,7 +28,14 @@ const Filter = () => {
           </div>
           <div className="filter-size">
             Size{" "}
-            <select value={value.size} onChange={value.filterBySize}>
+            <select
+              value={!!value && value.size}
+              onChange={() => {
+                if (!!value) {
+                  value.filterBySize();
+                }
+              }}
+            >
               <option>Select</option>
               <option value="XS">XS</option>
               <option value="S">S</option>

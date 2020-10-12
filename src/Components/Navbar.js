@@ -20,8 +20,8 @@ class Navigation extends Component {
               <ProductConsumer>
                 {(value) => {
                   return (
-                    <Link style={{ color: "white" }} eventKey={2} to="/cart">
-                      MyCart ({value.cart.length})
+                    <Link style={{ color: "white" }} to="/cart">
+                      MyCart ({!!value && !!value.cart && value.cart.length})
                     </Link>
                   );
                 }}

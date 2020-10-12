@@ -12,9 +12,14 @@ class Products extends Component {
           <div className="row">
             <ProductConsumer>
               {(value) => {
-                return value.products.map((product) => {
-                  return <ProductItem key={product.id} product={product} />;
-                });
+                return (
+                  !!value &&
+                  !!value.products &&
+                  value.products.length > 0 &&
+                  value.products.map((product) => {
+                    return <ProductItem key={product.id} product={product} />;
+                  })
+                );
               }}
             </ProductConsumer>
           </div>

@@ -26,7 +26,7 @@ class ProductDetails extends Component {
               </div>
               <div className="row">
                 <div className="col-4 mx-auto md-4">
-                  <img src={img} className="img-fluid" alt={title} />
+                  <img src={img} className="img-fluid" alt="product_details" />
                 </div>
               </div>
 

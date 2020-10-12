@@ -42,7 +42,7 @@ class Cart extends Component {
                         <div className="col-10 col-lg-2">
                           <img
                             src={cartItem.img}
-                            alt={cartItem.title}
+                            alt="product_cart"
                             className="img-fluid"
                             style={{ width: "6rem", height: "6rem" }}
                           />
