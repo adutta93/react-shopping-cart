@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "../App.css";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { ProductConsumer } from "../contextAPI";
+import Swal from "sweetalert2";
+import { Redirect } from "react-router-dom";
+
 class Cart extends Component {
   render() {
     return (
@@ -70,7 +73,16 @@ class Cart extends Component {
                         <div className="col-10 col-lg-2">
                           <Button
                             varient="danger"
-                            onClick={() => value.removeItem(cartItem.id)}
+                            onClick={() => {
+                              value.removeItem(cartItem.id);
+                              Swal.fire({
+                                title: "Item Removed!",
+                                icon: "success",
+                                position: "center",
+                                showConfirmButton: false,
+                                timer: 1500,
+                              });
+                            }}
                             size="sm"
                           >
                             Remove{" "}
@@ -88,7 +100,19 @@ class Cart extends Component {
                       </Col>
 
                       <Col>
-                        <Button varient="success" size="sm">
+                        <Button
+                          varient="success"
+                          size="sm"
+                          onClick={() => {
+                            Swal.fire({
+                              title: "Purchased!",
+                              icon: "success",
+                              position: "center",
+                              showConfirmButton: false,
+                              timer: 1500,
+                            });
+                          }}
+                        >
                           Proceed
                         </Button>
                       </Col>

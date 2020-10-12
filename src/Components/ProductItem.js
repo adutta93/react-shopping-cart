@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Card, Row, Col, Button } from "react-bootstrap";
 import { ProductConsumer } from "../contextAPI";
+import Swal from "sweetalert2";
 
 class ProductItem extends Component {
   render() {
@@ -36,6 +37,13 @@ class ProductItem extends Component {
                       disabled={inCart}
                       onClick={() => {
                         value.addToCart(id);
+                        Swal.fire({
+                          title: "Item added to cart",
+                          icon: "success",
+                          position: "center",
+                          showConfirmButton: false,
+                          timer: 1500,
+                        });
                       }}
                       variant="secondary"
                     >

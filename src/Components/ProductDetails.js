@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../contextAPI";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-
+import Swal from "sweetalert2";
 class ProductDetails extends Component {
   render() {
     return (
@@ -50,6 +50,13 @@ class ProductDetails extends Component {
                       disabled={inCart}
                       onClick={() => {
                         value.addToCart(id);
+                        Swal.fire({
+                          title: "Item added to cart",
+                          icon: "success",
+                          position: "center",
+                          showConfirmButton: false,
+                          timer: 1500,
+                        });
                       }}
                       variant="secondary"
                     >
